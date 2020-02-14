@@ -2,7 +2,6 @@ import { AfterContentInit, AfterViewInit, ChangeDetectorRef, DoCheck, ElementRef
 import { Subscription } from 'rxjs';
 import { NguCarouselOutlet } from './../ngu-carousel.directive';
 import { NguCarouselStore } from './ngu-carousel';
-import * as ɵngcc0 from '@angular/core';
 export declare class NguCarousel<T> extends NguCarouselStore implements OnInit, AfterContentInit, AfterViewInit, OnDestroy, DoCheck {
     private _el;
     private _renderer;
@@ -116,15 +115,4 @@ export declare class NguCarousel<T> extends NguCarouselStore implements OnInit, 
     private _setStyle;
     /** For generating style tag */
     private _createStyleElem;
-    static ɵfac: ɵngcc0.ɵɵFactoryDef<NguCarousel<any>>;
-    static ɵcmp: ɵngcc0.ɵɵComponentDefWithMeta<NguCarousel<any>, "ngu-carousel", never, {
-    "dataSource": "dataSource";
-    "trackBy": "trackBy";
-    "inputs": "inputs";
-}, {
-    "carouselLoad": "carouselLoad";
-    "onMove": "onMove";
-}, ["nextBtn", "prevBtn", "_defDirec"]>;
 }
-
-//# sourceMappingURL=ngu-carousel.component.d.ts.map

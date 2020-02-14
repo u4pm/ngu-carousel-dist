@@ -4,6 +4,14 @@ import { Directive, TemplateRef, ViewContainerRef, EventEmitter, isDevMode, Elem
 import { Subject, Observable, of, fromEvent, interval, merge, empty } from 'rxjs';
 import { takeUntil, mapTo, startWith, switchMap } from 'rxjs/operators';
 
+import * as ɵngcc0 from '@angular/core';
+
+const _c0 = ["ngucarousel"];
+const _c1 = ["nguItemsContainer"];
+const _c2 = ["touchContainer"];
+const _c3 = [[["", "NguCarouselPrev", ""]], [["", "NguCarouselNext", ""]], [["", "NguCarouselPoint", ""]]];
+const _c4 = ["[NguCarouselPrev]", "[NguCarouselNext]", "[NguCarouselPoint]"];
+const _c5 = ["*"];
 class NguCarouselStore {
     constructor(touch = new Touch(), vertical = new Vertical(), interval, transform = new Transfrom(), button, visibleItems, deviceType, type = 'fixed', token = '', items = 0, load = 0, deviceWidth = 0, carouselWidth = 0, itemWidth = 0, slideItems = 0, itemWidthPer = 0, itemLength = 0, currentSlide = 0, easing = 'cubic-bezier(0, 0, 0.2, 1)', speed = 200, loop = false, dexVal = 0, touchTransform = 0, isEnd = false, isFirst = true, isLast = false, RTL = false, point = true, velocity = 1) {
         this.touch = touch;
@@ -64,50 +72,30 @@ class NguCarouselOutletContext {
 
 let NguCarouselItemDirective = class NguCarouselItemDirective {
 };
-NguCarouselItemDirective = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[NguCarouselItem]'
-    })
-], NguCarouselItemDirective);
+NguCarouselItemDirective.ɵfac = function NguCarouselItemDirective_Factory(t) { return new (t || NguCarouselItemDirective)(); };
+NguCarouselItemDirective.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselItemDirective, selectors: [["", "NguCarouselItem", ""]] });
 let NguCarouselNextDirective = class NguCarouselNextDirective {
 };
-NguCarouselNextDirective = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[NguCarouselNext]'
-    })
-], NguCarouselNextDirective);
+NguCarouselNextDirective.ɵfac = function NguCarouselNextDirective_Factory(t) { return new (t || NguCarouselNextDirective)(); };
+NguCarouselNextDirective.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselNextDirective, selectors: [["", "NguCarouselNext", ""]] });
 let NguCarouselPrevDirective = class NguCarouselPrevDirective {
 };
-NguCarouselPrevDirective = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[NguCarouselPrev]'
-    })
-], NguCarouselPrevDirective);
+NguCarouselPrevDirective.ɵfac = function NguCarouselPrevDirective_Factory(t) { return new (t || NguCarouselPrevDirective)(); };
+NguCarouselPrevDirective.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselPrevDirective, selectors: [["", "NguCarouselPrev", ""]] });
 let NguCarouselPointDirective = class NguCarouselPointDirective {
 };
-NguCarouselPointDirective = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[NguCarouselPoint]'
-    })
-], NguCarouselPointDirective);
+NguCarouselPointDirective.ɵfac = function NguCarouselPointDirective_Factory(t) { return new (t || NguCarouselPointDirective)(); };
+NguCarouselPointDirective.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselPointDirective, selectors: [["", "NguCarouselPoint", ""]] });
 let NguCarouselDefDirective = class NguCarouselDefDirective {
     constructor(template) {
         this.template = template;
     }
 };
+NguCarouselDefDirective.ɵfac = function NguCarouselDefDirective_Factory(t) { return new (t || NguCarouselDefDirective)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.TemplateRef)); };
+NguCarouselDefDirective.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselDefDirective, selectors: [["", "nguCarouselDef", ""]] });
 NguCarouselDefDirective.ctorParameters = () => [
     { type: TemplateRef }
 ];
-NguCarouselDefDirective = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[nguCarouselDef]'
-    })
-], NguCarouselDefDirective);
 let NguCarouselOutlet = 
 // tslint:disable-next-line:directive-class-suffix
 class NguCarouselOutlet {
@@ -115,16 +103,11 @@ class NguCarouselOutlet {
         this.viewContainer = viewContainer;
     }
 };
+NguCarouselOutlet.ɵfac = function NguCarouselOutlet_Factory(t) { return new (t || NguCarouselOutlet)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ViewContainerRef)); };
+NguCarouselOutlet.ɵdir = ɵngcc0.ɵɵdefineDirective({ type: NguCarouselOutlet, selectors: [["", "nguCarouselOutlet", ""]] });
 NguCarouselOutlet.ctorParameters = () => [
     { type: ViewContainerRef }
 ];
-NguCarouselOutlet = __decorate([
-    Directive({
-        // tslint:disable-next-line:directive-selector
-        selector: '[nguCarouselOutlet]'
-    })
-    // tslint:disable-next-line:directive-class-suffix
-], NguCarouselOutlet);
 
 let NguCarousel = 
 // tslint:disable-next-line:component-class-suffix
@@ -837,6 +820,41 @@ class NguCarousel extends NguCarouselStore {
         return styleItem;
     }
 };
+NguCarousel.ɵfac = function NguCarousel_Factory(t) { return new (t || NguCarousel)(ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ElementRef), ɵngcc0.ɵɵdirectiveInject(ɵngcc0.Renderer2), ɵngcc0.ɵɵdirectiveInject(ɵngcc0.IterableDiffers), ɵngcc0.ɵɵdirectiveInject(PLATFORM_ID), ɵngcc0.ɵɵdirectiveInject(ɵngcc0.ChangeDetectorRef)); };
+NguCarousel.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NguCarousel, selectors: [["ngu-carousel"]], contentQueries: function NguCarousel_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
+        ɵngcc0.ɵɵcontentQuery(dirIndex, NguCarouselNextDirective, true, ElementRef);
+        ɵngcc0.ɵɵcontentQuery(dirIndex, NguCarouselPrevDirective, true, ElementRef);
+        ɵngcc0.ɵɵcontentQuery(dirIndex, NguCarouselDefDirective, false);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.nextBtn = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.prevBtn = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx._defDirec = _t);
+    } }, viewQuery: function NguCarousel_Query(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵstaticViewQuery(NguCarouselOutlet, true);
+        ɵngcc0.ɵɵstaticViewQuery(_c0, true, ElementRef);
+        ɵngcc0.ɵɵstaticViewQuery(_c1, true, ElementRef);
+        ɵngcc0.ɵɵstaticViewQuery(_c2, true, ElementRef);
+    } if (rf & 2) {
+        var _t;
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx._nodeOutlet = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.carouselMain1 = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.nguItemsContainer = _t.first);
+        ɵngcc0.ɵɵqueryRefresh(_t = ɵngcc0.ɵɵloadQuery()) && (ctx.touchContainer = _t.first);
+    } }, inputs: { dataSource: "dataSource", trackBy: "trackBy", inputs: "inputs" }, outputs: { carouselLoad: "carouselLoad", onMove: "onMove" }, features: [ɵngcc0.ɵɵInheritDefinitionFeature], ngContentSelectors: _c4, decls: 11, vars: 0, consts: [[1, "ngucarousel"], ["ngucarousel", ""], [1, "ngu-touch-container"], ["touchContainer", ""], [1, "ngucarousel-items"], ["nguItemsContainer", ""], ["nguCarouselOutlet", ""], [1, "nguclearFix"]], template: function NguCarousel_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef(_c3);
+        ɵngcc0.ɵɵelementStart(0, "div", 0, 1);
+        ɵngcc0.ɵɵelementStart(2, "div", 2, 3);
+        ɵngcc0.ɵɵelementStart(4, "div", 4, 5);
+        ɵngcc0.ɵɵelementContainer(6, 6);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵelement(7, "div", 7);
+        ɵngcc0.ɵɵprojection(8);
+        ɵngcc0.ɵɵprojection(9, 1);
+        ɵngcc0.ɵɵelementEnd();
+        ɵngcc0.ɵɵprojection(10, 2);
+    } }, directives: [NguCarouselOutlet], styles: ["[_nghost-%COMP%]{display:block;position:relative}.ngurtl[_nghost-%COMP%]{direction:rtl}.ngucarousel[_ngcontent-%COMP%]{position:relative;overflow:hidden;height:100%}.ngucarousel[_ngcontent-%COMP%]   .ngucarousel-items[_ngcontent-%COMP%]{position:relative;display:-webkit-box;display:flex;height:100%}.nguvertical[_ngcontent-%COMP%]{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.banner[_ngcontent-%COMP%]   .ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]{position:absolute;width:100%;bottom:20px}.banner[_ngcontent-%COMP%]   .ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{background:rgba(255,255,255,.55)}.banner[_ngcontent-%COMP%]   .ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li.active[_ngcontent-%COMP%]{background:#fff}.banner[_ngcontent-%COMP%]   .ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]:hover{cursor:pointer}.ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]{list-style-type:none;text-align:center;padding:12px;margin:0;white-space:nowrap;overflow:auto;box-sizing:border-box}.ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]{display:inline-block;border-radius:50%;background:rgba(0,0,0,.55);padding:4px;margin:0 4px;-webkit-transition:.4s;transition:.4s}.ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li.active[_ngcontent-%COMP%]{background:#6b6b6b;-webkit-transform:scale(1.8);transform:scale(1.8)}.ngucarouselPointDefault[_ngcontent-%COMP%]   .ngucarouselPoint[_ngcontent-%COMP%]   li[_ngcontent-%COMP%]:hover{cursor:pointer}.nguclearFix[_ngcontent-%COMP%]{clear:both}"], changeDetection: 0 });
 NguCarousel.ctorParameters = () => [
     { type: ElementRef },
     { type: Renderer2 },
@@ -880,17 +898,7 @@ __decorate([
 __decorate([
     Input()
 ], NguCarousel.prototype, "trackBy", null);
-NguCarousel = __decorate([
-    Component({
-        // tslint:disable-next-line:component-selector
-        selector: 'ngu-carousel',
-        template: "<div #ngucarousel class=\"ngucarousel\">\r\n  <div #touchContainer class=\"ngu-touch-container\">\r\n    <div #nguItemsContainer class=\"ngucarousel-items\">\r\n      <ng-container nguCarouselOutlet></ng-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"nguclearFix\"></div>\r\n  <ng-content select=\"[NguCarouselPrev]\"></ng-content>\r\n  <ng-content select=\"[NguCarouselNext]\"></ng-content>\r\n</div>\r\n<ng-content select=\"[NguCarouselPoint]\"></ng-content>\r\n",
-        changeDetection: ChangeDetectionStrategy.OnPush,
-        styles: [":host{display:block;position:relative}:host.ngurtl{direction:rtl}.ngucarousel{position:relative;overflow:hidden;height:100%}.ngucarousel .ngucarousel-items{position:relative;display:-webkit-box;display:flex;height:100%}.nguvertical{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.banner .ngucarouselPointDefault .ngucarouselPoint{position:absolute;width:100%;bottom:20px}.banner .ngucarouselPointDefault .ngucarouselPoint li{background:rgba(255,255,255,.55)}.banner .ngucarouselPointDefault .ngucarouselPoint li.active{background:#fff}.banner .ngucarouselPointDefault .ngucarouselPoint li:hover{cursor:pointer}.ngucarouselPointDefault .ngucarouselPoint{list-style-type:none;text-align:center;padding:12px;margin:0;white-space:nowrap;overflow:auto;box-sizing:border-box}.ngucarouselPointDefault .ngucarouselPoint li{display:inline-block;border-radius:50%;background:rgba(0,0,0,.55);padding:4px;margin:0 4px;-webkit-transition:.4s;transition:.4s}.ngucarouselPointDefault .ngucarouselPoint li.active{background:#6b6b6b;-webkit-transform:scale(1.8);transform:scale(1.8)}.ngucarouselPointDefault .ngucarouselPoint li:hover{cursor:pointer}.nguclearFix{clear:both}"]
-    })
-    // tslint:disable-next-line:component-class-suffix
-    ,
-    __param(3, Inject(PLATFORM_ID))
+NguCarousel = __decorate([ __param(3, Inject(PLATFORM_ID))
 ], NguCarousel);
 
 let NguItemComponent = class NguItemComponent {
@@ -898,64 +906,198 @@ let NguItemComponent = class NguItemComponent {
         this.classes = true;
     }
 };
+NguItemComponent.ɵfac = function NguItemComponent_Factory(t) { return new (t || NguItemComponent)(); };
+NguItemComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NguItemComponent, selectors: [["ngu-item"]], hostVars: 2, hostBindings: function NguItemComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵngcc0.ɵɵclassProp("item", ctx.classes);
+    } }, ngContentSelectors: _c5, decls: 1, vars: 0, template: function NguItemComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef();
+        ɵngcc0.ɵɵprojection(0);
+    } }, styles: [""] });
 __decorate([
     HostBinding('class.item')
 ], NguItemComponent.prototype, "classes", void 0);
-NguItemComponent = __decorate([
-    Component({
-        // tslint:disable-next-line:component-selector
-        selector: 'ngu-item',
-        template: "<ng-content></ng-content>\r\n",
-        styles: [""]
-    })
-], NguItemComponent);
 
 let NguTileComponent = class NguTileComponent {
     constructor() {
         this.classes = true;
     }
 };
+NguTileComponent.ɵfac = function NguTileComponent_Factory(t) { return new (t || NguTileComponent)(); };
+NguTileComponent.ɵcmp = ɵngcc0.ɵɵdefineComponent({ type: NguTileComponent, selectors: [["ngu-tile"]], hostVars: 2, hostBindings: function NguTileComponent_HostBindings(rf, ctx) { if (rf & 2) {
+        ɵngcc0.ɵɵclassProp("item", ctx.classes);
+    } }, ngContentSelectors: _c5, decls: 2, vars: 0, consts: [[1, "tile"]], template: function NguTileComponent_Template(rf, ctx) { if (rf & 1) {
+        ɵngcc0.ɵɵprojectionDef();
+        ɵngcc0.ɵɵelementStart(0, "div", 0);
+        ɵngcc0.ɵɵprojection(1);
+        ɵngcc0.ɵɵelementEnd();
+    } }, styles: ["[_nghost-%COMP%]{padding:10px;box-sizing:border-box}.tile[_ngcontent-%COMP%]{box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}"] });
 __decorate([
     HostBinding('class.item')
 ], NguTileComponent.prototype, "classes", void 0);
-NguTileComponent = __decorate([
-    Component({
-        // tslint:disable-next-line:component-selector
-        selector: 'ngu-tile',
-        template: "<div class=\"tile\">\r\n  <ng-content></ng-content>\r\n</div>\r\n",
-        styles: [":host{padding:10px;box-sizing:border-box}.tile{box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}"]
-    })
-], NguTileComponent);
 
 let NguCarouselModule = class NguCarouselModule {
 };
-NguCarouselModule = __decorate([
-    NgModule({
-        imports: [CommonModule],
-        exports: [
-            NguCarousel,
-            NguItemComponent,
-            NguTileComponent,
-            NguCarouselPointDirective,
-            NguCarouselItemDirective,
-            NguCarouselNextDirective,
-            NguCarouselPrevDirective,
-            NguCarouselDefDirective,
-            NguCarouselOutlet
-        ],
-        declarations: [
-            NguCarousel,
-            NguItemComponent,
-            NguTileComponent,
-            NguCarouselPointDirective,
-            NguCarouselItemDirective,
-            NguCarouselNextDirective,
-            NguCarouselPrevDirective,
-            NguCarouselDefDirective,
-            NguCarouselOutlet
-        ]
-    })
-], NguCarouselModule);
+NguCarouselModule.ɵmod = ɵngcc0.ɵɵdefineNgModule({ type: NguCarouselModule });
+NguCarouselModule.ɵinj = ɵngcc0.ɵɵdefineInjector({ factory: function NguCarouselModule_Factory(t) { return new (t || NguCarouselModule)(); }, imports: [[CommonModule]] });
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselItemDirective, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[NguCarouselItem]'
+            }]
+    }], null, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselNextDirective, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[NguCarouselNext]'
+            }]
+    }], null, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselPrevDirective, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[NguCarouselPrev]'
+            }]
+    }], null, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselPointDirective, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[NguCarouselPoint]'
+            }]
+    }], null, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselDefDirective, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[nguCarouselDef]'
+            }]
+    }], function () { return [{ type: ɵngcc0.TemplateRef }]; }, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselOutlet, [{
+        type: Directive,
+        args: [{
+                // tslint:disable-next-line:directive-selector
+                selector: '[nguCarouselOutlet]'
+            }]
+    }], function () { return [{ type: ɵngcc0.ViewContainerRef }]; }, null); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarousel, [{
+        type: Component,
+        args: [{
+                // tslint:disable-next-line:component-selector
+                selector: 'ngu-carousel',
+                template: "<div #ngucarousel class=\"ngucarousel\">\r\n  <div #touchContainer class=\"ngu-touch-container\">\r\n    <div #nguItemsContainer class=\"ngucarousel-items\">\r\n      <ng-container nguCarouselOutlet></ng-container>\r\n    </div>\r\n  </div>\r\n  <div class=\"nguclearFix\"></div>\r\n  <ng-content select=\"[NguCarouselPrev]\"></ng-content>\r\n  <ng-content select=\"[NguCarouselNext]\"></ng-content>\r\n</div>\r\n<ng-content select=\"[NguCarouselPoint]\"></ng-content>\r\n",
+                changeDetection: ChangeDetectionStrategy.OnPush,
+                styles: [":host{display:block;position:relative}:host.ngurtl{direction:rtl}.ngucarousel{position:relative;overflow:hidden;height:100%}.ngucarousel .ngucarousel-items{position:relative;display:-webkit-box;display:flex;height:100%}.nguvertical{-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column}.banner .ngucarouselPointDefault .ngucarouselPoint{position:absolute;width:100%;bottom:20px}.banner .ngucarouselPointDefault .ngucarouselPoint li{background:rgba(255,255,255,.55)}.banner .ngucarouselPointDefault .ngucarouselPoint li.active{background:#fff}.banner .ngucarouselPointDefault .ngucarouselPoint li:hover{cursor:pointer}.ngucarouselPointDefault .ngucarouselPoint{list-style-type:none;text-align:center;padding:12px;margin:0;white-space:nowrap;overflow:auto;box-sizing:border-box}.ngucarouselPointDefault .ngucarouselPoint li{display:inline-block;border-radius:50%;background:rgba(0,0,0,.55);padding:4px;margin:0 4px;-webkit-transition:.4s;transition:.4s}.ngucarouselPointDefault .ngucarouselPoint li.active{background:#6b6b6b;-webkit-transform:scale(1.8);transform:scale(1.8)}.ngucarouselPointDefault .ngucarouselPoint li:hover{cursor:pointer}.nguclearFix{clear:both}"]
+            }]
+    }], function () { return [{ type: ɵngcc0.ElementRef }, { type: ɵngcc0.Renderer2 }, { type: ɵngcc0.IterableDiffers }, { type: Object, decorators: [{
+                type: Inject,
+                args: [PLATFORM_ID]
+            }] }, { type: ɵngcc0.ChangeDetectorRef }]; }, { carouselLoad: [{
+            type: Output,
+            args: ['carouselLoad']
+        }], onMove: [{
+            type: Output,
+            args: ['onMove']
+        }], dataSource: [{
+            type: Input,
+            args: ['dataSource']
+        }], nextBtn: [{
+            type: ContentChild,
+            args: [NguCarouselNextDirective, /* TODO: add static flag */ { read: ElementRef }]
+        }], prevBtn: [{
+            type: ContentChild,
+            args: [NguCarouselPrevDirective, /* TODO: add static flag */ { read: ElementRef }]
+        }], trackBy: [{
+            type: Input
+        }], inputs: [{
+            type: Input,
+            args: ['inputs']
+        }], _defDirec: [{
+            type: ContentChildren,
+            args: [NguCarouselDefDirective]
+        }], _nodeOutlet: [{
+            type: ViewChild,
+            args: [NguCarouselOutlet, { static: true }]
+        }], carouselMain1: [{
+            type: ViewChild,
+            args: ['ngucarousel', { read: ElementRef, static: true }]
+        }], nguItemsContainer: [{
+            type: ViewChild,
+            args: ['nguItemsContainer', { read: ElementRef, static: true }]
+        }], touchContainer: [{
+            type: ViewChild,
+            args: ['touchContainer', { read: ElementRef, static: true }]
+        }] }); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguItemComponent, [{
+        type: Component,
+        args: [{
+                // tslint:disable-next-line:component-selector
+                selector: 'ngu-item',
+                template: "<ng-content></ng-content>\r\n",
+                styles: [""]
+            }]
+    }], function () { return []; }, { classes: [{
+            type: HostBinding,
+            args: ['class.item']
+        }] }); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguTileComponent, [{
+        type: Component,
+        args: [{
+                // tslint:disable-next-line:component-selector
+                selector: 'ngu-tile',
+                template: "<div class=\"tile\">\r\n  <ng-content></ng-content>\r\n</div>\r\n",
+                styles: [":host{padding:10px;box-sizing:border-box}.tile{box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12)}"]
+            }]
+    }], function () { return []; }, { classes: [{
+            type: HostBinding,
+            args: ['class.item']
+        }] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵngcc0.ɵɵsetNgModuleScope(NguCarouselModule, { declarations: function () { return [NguCarousel,
+        NguItemComponent,
+        NguTileComponent,
+        NguCarouselPointDirective,
+        NguCarouselItemDirective,
+        NguCarouselNextDirective,
+        NguCarouselPrevDirective,
+        NguCarouselDefDirective,
+        NguCarouselOutlet]; }, imports: function () { return [CommonModule]; }, exports: function () { return [NguCarousel,
+        NguItemComponent,
+        NguTileComponent,
+        NguCarouselPointDirective,
+        NguCarouselItemDirective,
+        NguCarouselNextDirective,
+        NguCarouselPrevDirective,
+        NguCarouselDefDirective,
+        NguCarouselOutlet]; } }); })();
+/*@__PURE__*/ (function () { ɵngcc0.ɵsetClassMetadata(NguCarouselModule, [{
+        type: NgModule,
+        args: [{
+                imports: [CommonModule],
+                exports: [
+                    NguCarousel,
+                    NguItemComponent,
+                    NguTileComponent,
+                    NguCarouselPointDirective,
+                    NguCarouselItemDirective,
+                    NguCarouselNextDirective,
+                    NguCarouselPrevDirective,
+                    NguCarouselDefDirective,
+                    NguCarouselOutlet
+                ],
+                declarations: [
+                    NguCarousel,
+                    NguItemComponent,
+                    NguTileComponent,
+                    NguCarouselPointDirective,
+                    NguCarouselItemDirective,
+                    NguCarouselNextDirective,
+                    NguCarouselPrevDirective,
+                    NguCarouselDefDirective,
+                    NguCarouselOutlet
+                ]
+            }]
+    }], null, null); })();
 
 /*
  * Public API Surface of carousel
@@ -966,4 +1108,5 @@ NguCarouselModule = __decorate([
  */
 
 export { NguCarousel, NguCarouselConfig, NguCarouselModule, NguCarouselStore, ItemsControl as ɵa, NguButton as ɵb, NguCarouselItemDirective as ɵc, NguCarouselNextDirective as ɵd, NguCarouselPrevDirective as ɵe, NguCarouselPointDirective as ɵf, NguCarouselDefDirective as ɵg, NguCarouselOutlet as ɵh, NguItemComponent as ɵi, NguTileComponent as ɵj };
+
 //# sourceMappingURL=ngu-carousel.js.map

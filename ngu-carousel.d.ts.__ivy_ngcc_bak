@@ -6,5 +6,3 @@ export { NguCarouselDefDirective as ɵg, NguCarouselItemDirective as ɵc, NguCar
 export { ItemsControl as ɵa, NguButton as ɵb } from './lib/ngu-carousel/ngu-carousel';
 export { NguItemComponent as ɵi } from './lib/ngu-item/ngu-item.component';
 export { NguTileComponent as ɵj } from './lib/ngu-tile/ngu-tile.component';
-
-//# sourceMappingURL=ngu-carousel.d.ts.map
